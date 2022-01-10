@@ -1,16 +1,23 @@
+
+import {useState} from "react";
+import ExpandLessIcon from '@mui/icons-material/ExpandLess';
+import ExpandMoreSharpIcon from '@mui/icons-material/ExpandMoreSharp';
+import IconButton from "@mui/material/IconButton";
 export function Experience() {
-  const styles = {
-    display: "flex",
-    flexDirection: "column",
-    alignItems: "center",
-    flexWrap: "wrap"
-  };
-  const underline = {
-    textDecoration: "underline",
-  };
+  const[initialState, updatedState] = useState(false);
+  const toggleStyle = {display: initialState ? "none":"block"};
   return (
-    <div style={styles}>
-      <h3 style={underline}> WORK EXPERIENCE</h3>
+    <div>
+        <IconButton
+        color="primary"
+        aria-label="add to shopping cart"
+        onClick={(e) => {
+          updatedState(!initialState);
+        }}
+      >  WORK EXPERIENCE {initialState?<ExpandMoreSharpIcon/>:<ExpandLessIcon/>}</IconButton>
+      
+    <div style={toggleStyle}>
+   
       <ul>
         <li>
           <p>
@@ -32,6 +39,7 @@ export function Experience() {
          <p> <strong>Designation: </strong>Software Developer</p>
         </li>
       </ul>
+    </div>
     </div>
   );
 }

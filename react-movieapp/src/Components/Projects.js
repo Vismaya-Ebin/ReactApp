@@ -1,14 +1,28 @@
+import ExpandLessIcon from '@mui/icons-material/ExpandLess';
+import ExpandMoreSharpIcon from '@mui/icons-material/ExpandMoreSharp';
+import { useState } from 'react';
+import IconButton from "@mui/material/IconButton";
+
 export function Projects() {
-  const styles = {
-    textAlign: "center",
-    color:"green"
-  };
+ const [less, more] = useState(false);
+ const toggleStyle ={
+   display: less ? "none" :"block"
+ }
+ 
   return (
     <div>
-      <h1 style={styles}>VISMAYA WILSON</h1>
-      <h3 style={styles}>SOFTWARE DEVELOPER</h3>
-      <h3>SIGNIFICANT PROJECTS</h3>
-      <p>
+     
+     
+      <IconButton
+        color="primary"
+        aria-label="add to shopping cart"
+        onClick={(e) => {
+          more(!less);
+        }}
+      > SIGNIFICANT PROJECTS {less?<ExpandMoreSharpIcon/>:<ExpandLessIcon/>}</IconButton>
+      
+      
+      <main style={toggleStyle}>
         <ul>
           <li>
             <h3>Work Load Management (Walgreens)</h3>
@@ -135,7 +149,7 @@ export function Projects() {
             </ul>
           </li>
         </ul>
-      </p>
+      </main>
     </div>
   );
 }

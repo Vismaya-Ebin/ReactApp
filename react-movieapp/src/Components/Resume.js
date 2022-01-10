@@ -5,31 +5,42 @@ import { Education } from "./Education";
 import { Projects } from "./Projects";
 import { Experience } from "./Experience";
 export function Resume() {
-  const styles = {
-    display: "flex",
-    flexDirection: "row",
-    flexWrap: "wrap",
-    justifyContent: "space-between",
-  };
-
-  const leftStyle = {
-    width: "30%",
-  };
-  const rightStyle = {
-    width: "70%",
-  };
   return (
-    <div style={styles}>
-      <div style={leftStyle}>
-        <About />
-        <Skills />
-        <Experience/>
-        <Contact />
+    <main>
+      <header>
+        <h1>VISMAYA WILSON</h1>
+        <h2>SOFTWARE DEVELOPER</h2>
+      </header>
+      <div className="flex-container">
+        
+        <div className="aside-items">
+          <aside>
+         
+            <About />
+          </aside>
+          <aside>
+            <Skills />
+          </aside>
+          <aside>
+          <Experience />
+          
+          </aside>
+          <aside>
+          <Contact />
+          </aside>
+        </div>
+        <div className="section-items">
+          <section>
+           
+          </section>
+          <section>
+            <Projects />
+          </section>
+          <section>
+          <Education />
+          </section>
+        </div>
       </div>
-      <div style={rightStyle}>
-        <Projects />
-        <Education />
-      </div>
-    </div>
+    </main>
   );
 }

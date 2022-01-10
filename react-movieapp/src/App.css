@@ -1,28 +1,47 @@
-* {
-  font-family: "Times New Roman", Times, serif;
-  font-size: 17px;
-}
-h3 {
-  color: blue;
-  margin: 10px;
+ /* * {
+ 
+  font-size: 20px;
+  margin:0px;
+  padding:20px;
+ 
+  
+} */
+
+
+main,
+header,
+section,
+aside,
+main {
+  background: black;
+  color: white;
 }
 
-strong {
-  color: black;
-  font-weight: bold;
-}
 
-h1,
-h2 {
-  color: green;
-  font-size: 22px;
-}
-ul {
+
+ul{
   list-style-type: disc;
 }
-li {
-  margin: 6px;
+
+
+/*width > 640px*/
+.flex-container {
+  display: flex;
+  flex-direction: column;
 }
-p{
-    line-height:20px;
+@media screen and (min-width: 640px) {
+  .flex-container {
+   
+    display: flex;
+    flex-direction: row;
+    
+  }
+  .aside-items {
+    flex: 0 1 600px;
+    background-color: #000000;
+  }
+  .section-items {
+    flex: 1;
+    background-color: #000000;
+  }
 }
