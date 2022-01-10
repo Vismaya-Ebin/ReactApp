@@ -1,0 +1,28 @@
+* {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 17px;
+}
+h3 {
+  color: blue;
+  margin: 10px;
+}
+
+strong {
+  color: black;
+  font-weight: bold;
+}
+
+h1,
+h2 {
+  color: green;
+  font-size: 22px;
+}
+ul {
+  list-style-type: disc;
+}
+li {
+  margin: 6px;
+}
+p{
+    line-height:20px;
+}

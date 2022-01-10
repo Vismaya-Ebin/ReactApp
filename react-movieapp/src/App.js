@@ -24,6 +24,7 @@ function App() {
           <Typography variant="h6" color="inherit" component="div">
             Resume
           </Typography>
+        
         </Toolbar>
       </AppBar>
     </Box>

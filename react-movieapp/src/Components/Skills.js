@@ -1,12 +1,26 @@
 export function Skills(){
-    return(<div>
-        <h3>Skills</h3>
+    const styles ={
+        display:"flex",
+        flexDirection:"column",
+        alignItems: "center",
+        flexWrap: "wrap"
+    }
+    const underline ={
+        textDecoration: "underline"
+    }
+    return(<div style={styles}>
+        <h3 style={underline}>SKILLS</h3>
         
-<p>React JS</p>
-<p>HTML</p>
-<p>CSS</p>
-<p>JS</p>
-<p>Angular</p>
+    <ul>
+        <li>React JS</li>
+        <li>HTML</li>
+        <li>Javascript</li>
+        <li>Es6</li>
+        <li>CSS</li>
+        <li>Angular</li>
+        <li>Git</li>
+        </ul>    
+
 
     </div>)
 }
